@@ -12,3 +12,16 @@ GRID_WIDTH = WIDTH / TILE_SIZE
 GRID_HEIGHT = HEIGHT / TILE_SIZE
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
+clock = pygame.time.clock()
+
+def main():
+    running = True
+
+    while running:
+        clock.tick(FPS)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+    
+    pygame.quit()
